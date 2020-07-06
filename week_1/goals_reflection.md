@@ -1,10 +1,10 @@
 ## Weekly Goals ##
-* Week number 1
+### Week number 1 ###
 * Bulleted list of goals
 ## Plans to Achieve ##
-Bulleted list of plans
+* Bulleted list of plans
 ## Evidence ##
-Bulleted list with links to projects
+* Bulleted list with links to projects
 ## Daily Goals ##
 ### Date ###
 * Goal: ...
