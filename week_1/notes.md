@@ -1,0 +1,21 @@
+# Notes Week 1 #
+## Monday July 6 ##
+- Expect to not finish things
+- Expect gear changes
+- Things move very quickly
+- There’s support for Imposter Syndrome
+&nbsp; - Take a step back
+&nbsp; - Break it into smaller chunks
+&nbsp; - There is a 1-1 option with Dana
+- "I’m not good at this YET"
+- Avoid “shoulds”
+- Trust the process
+- Feedback must be kind
+- Takes about 3-4 weeks to settle into the balance
+- There will be a frustration phase
+- Become comfortable with the discomfort
+- Holistic coaching sessions
+- Book using the form pinned to the channel
+- Bring notepad
+- Communicate
+- Daily pair check-ins
