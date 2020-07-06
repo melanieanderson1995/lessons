@@ -4,9 +4,9 @@
 - Expect gear changes
 - Things move very quickly
 - There’s support for Imposter Syndrome
-&nbsp; - Take a step back
-&nbsp; - Break it into smaller chunks
-&nbsp; - There is a 1-1 option with Dana
+- &nbsp;Take a step back
+- &nbsp;Break it into smaller chunks
+- &nbsp;There is a 1-1 option with Dana
 - "I’m not good at this YET"
 - Avoid “shoulds”
 - Trust the process
