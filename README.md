@@ -1,7 +1,7 @@
 # Melanie Anderson Makers Lessons #
 Lessons completed during Makers Academy by Melanie Anderson
+# Week number #
 ## Weekly Goals ##
-- Week number
 - Bulleted list of goals
 ## Plans to Achieve ##
 Bulleted list of plans
