@@ -1,5 +1,5 @@
+# Week number 3 #
 ## Weekly Goals ##
-### Week number 3 ###
 * Bulleted list of goals
 ## Plans to Achieve ##
 * Bulleted list of plans

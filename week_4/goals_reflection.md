@@ -1,5 +1,5 @@
+# Week number 4 #
 ## Weekly Goals ##
-### Week number 4 ###
 * Bulleted list of goals
 ## Plans to Achieve ##
 * Bulleted list of plans

@@ -1,5 +1,5 @@
+# Week number 1 #
 ## Weekly Goals ##
-### Week number 1 ###
 * Bulleted list of goals
 ## Plans to Achieve ##
 * Bulleted list of plans
