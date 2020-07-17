@@ -20,7 +20,7 @@
 * Communicate
 * Daily pair check-ins
 
-##Tuesday July 7##
+## Tuesday July 7 ##
 * OO programming = object oriented programming
   * 4 principles: encapsulation, abstraction, inheritance, polymorphism
   * Abstraction: each object should only expose a high-level mechanism for using it
@@ -63,7 +63,7 @@
   * If class description has AND in it then it needs to be refactored
     * Prints invoice AND emails invoice AND ...
   * By refactoring the program different classes can be used independently or by any other class
-  * ANDs mean the classes are coupled, which makes it more complicated and relies on using all the classes rather than the one you're looking for 
+  * ANDs mean the classes are coupled, which makes it more complicated and relies on using all the classes rather than the one you're looking for
 * Debugging workshop
   * What is a bug?
     * Unintended error
@@ -92,3 +92,74 @@
     * Smaller program that lives inside Ruby
     * How do I see inside a gem?
       * Can open it from terminal
+
+## Thursday July 9 ##
+* TDD
+  * Learning objectives:
+    * Define unit testing as the process of testing the smallest possible unit of a program
+    * Understand each of the three A's of a unit test
+    * Write some simple unit tests
+  * TDD = Test driven development
+  * TDD cycle (red, green, refactor)
+    * Write first test
+    * Run the code, watch it fail (red)
+    * Read the error message
+    * Write the code to pass the test
+    * Run it again, watch it pass (green)
+    * Refactor
+      * Making code more concise, cleaning the code up, should NOT change behavior
+  * Instance variables: universal within a class, able to be used across methods in a class
+    * Instance variable is an attribute of an object (eye color, hair color, etc)
+    * State that we're giving an object, methods are behavior of object
+  * Unit test steps
+    * What do we want to test?
+    * Identify nouns (class) and verbs (method)
+    * Do input/output table
+  * UML = Universal modified language
+  * 3 A's:
+    * Arrange: set up test
+    * Act: behavior/method we're calling
+    * Assert: what happens after it takes place
+
+## Friday July 10 ##
+* Instance variable: variable that starts with an @ symbol, gives objects their own private space to store data
+  * We say objects can 1. Do things 2. Know things
+    * Methods make things happen they DO things
+    * Instance variables store data, they KNOW things
+    * e.g. Fruit class, each attribute becomes instance variable like @color, @type, @weight
+  * Define instance variables inside classes
+  * Code examples
+    * class CoffeeMachine
+      * def initialize
+        * @water = 100
+      * end
+      * def make_coffee
+        * @water -= 10
+      * end
+    * end
+  * To read instance variable "String #{@variable}"
+  * You CANNOT access instance variables from outside the class (encapsulation)
+    * You can open a window into the object's data so it's available from outside
+      * class CoffeeMachine
+        * def initialize
+          * @water = 100
+        * end
+        * def water
+          * @water
+        * end
+      * end
+      * machine = CoffeeMachine.new
+      * machine.water
+      * OR use attr_reader
+        * class CoffeeMachine
+          * attr_reader :water
+          * def initialize
+            * @water = 100
+          * end
+        * end
+        * Ruby creates water method by itself
+  * Undefined instance variable always returns nil
+  * Instance variables don't HAVE to be created in the initialize method, but that's how you give them an initial value
+  * Avoid advanced ways to access instance variables (e.g., instance_variable_get)
+  * To get list of instance variables
+    * machine.instance_variables
