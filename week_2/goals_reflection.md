@@ -9,9 +9,13 @@
 * Explain some basic OO principles and tie them to high level concerns (e.g. ease of change)
 * Review another person's code and give them meaningful feedback
 ## Plans to Achieve ##
-* Bulleted list of plans
+* Self research in the morning
+* Work through oystercard challenge in pairs
+* Complete code review
+* Complete process workshop
 ## Evidence ##
-* Bulleted list with links to projects
+* Notes week 2
+* https://github.com/melanieanderson1995/oyster_card
 ## Daily Goals ##
 ### Monday July 13 ###
 * Goal:
@@ -64,16 +68,17 @@ SICK DAY
   * Do coaching session on dependency injection
   * Work with mentor through the practicals
 * Plan:
-  * Work Rae through the practicals
-    *
+  * COACHING SESSION CANCELED
+  * Work with Rae through the practicals
   * Practice encapsulation and TDD with oystercard challenge
 * Evidence:
   * Friday July 17 notes
-  * Completed Oystercard tasks 
+  * Completed Oystercard tasks
 ## Weekly Reflection ##
 ### Question 1: ###
 Did you meet all of your goals to the standard you set at the start of the week?
+  * I met most of my goals, but I'm still getting really stuck on working through the practicals on my own. I have good note taking practices though.
 ### Question 2: ###
 What would you change/improve moving forward?
-* Technical: ...
-* Personal: ...
+* Technical: Practice coding on my own more so I'm not having to rely on other people so much
+* Personal: Learn to be comfortable with not knowing the answer and practice how I SOLVE problems on my own rather than relying on others
