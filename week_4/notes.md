@@ -94,3 +94,75 @@
         * e.g. "connection.exec("INSERT INTO bookmarks (url) VALUES ('http://www.makersacademy.com');")" is now equal to "Bookmark.create(url: http://www.makersacademy.com')"
   * USE POST: if you want to type in a password, etc, when you're typing in an input, will never have parameter, you're giving it secret information
   * USE GET: if you want to retrieve information from the server
+## Wednesday July 29
+* Database Domain Modelling using CRC
+  * Learning objectives:
+    * Explain how to use CRC cards to model a domain
+    * Model a simple domain using CRC cards
+    * Infer database structure from domain structure
+  * CRC
+    * Class Responsibility Collaborator
+    * Class name: Customer
+      * |Responsibilities: Places orders, etc| -> |Collaborators: Order|
+      * Responsibilities: Tasks the class must do
+      * Collaborators: What other class this class must rely on to complete its tasks
+      * Include the classes id in the collaborator's table (if bike is docking station's collaborator, include docking_station_id in bike's table)
+  * Databases hold information much better than programmers do
+  * ![CRC example](/lessons/week_4/crc_example.jpg?raw=true "CRC example from workshop")
+  * https://www.reddit.com/r/explainlikeimfive/comments/3qqm9h/eli5_relational_databases/
+* Database data in a ruby object
+  1. Bring database data from database rows into Ruby application
+  2. Wrap that data in Ruby objects(models)
+  3. Ask a model to do things with the data it wraps
+* Save bookmark_manager database changes in separate .sql file so others running these files can run each step of the command
+* Writing "attribute:" as an argument (e.g. initialize(id:)) names variable in the argument. By initializing something with a semicolon you are calling it out in the argument, called a keyword argument
+  * def obvious_total(subtotal:, tax:, discount:)
+    * subtotal + tax - discount
+  * end
+  * obvious_total(subtotal: 100, tax: 10, discount: 5) # => 105
+* CRUD
+  * 4 actions with persistent data: Creating data, Reading data, Updating data, Deleting data
+* DELETE and PUT are not part of theHMTL5 form standard
+  * These methods were included in early HTML5 drafts, but were later removed
+  * Executing PUT and DELETE to modify resources on the origin server is straight-forward for modern Web browsers, but not for unscripted browser interaction
+  * Other considerations
+    * Using POST(cachable) as a tunnel instead of using PUT(not cachable)/DELETE(not cachable) can lead to caching mis-matches
+    * Using non idempotent method POST to perform an idempotent operation (PUT/DELETE) complicates recovery due to network failures
+  * Final reasoning
+    * You wouldn't want to PUT a form payload, DELETE only makes sense if there is no payload
+## Friday July 31
+* More SQL
+  * SELECT
+    * (SELECT population FROM table WHERE name = 'Germany') to display population from Germany's row
+    * (SELECT name, population FROM world WHERE name IN ('Sweden', 'Norway', etc)) display name and population from Sweden's and Norway's rows
+    * (SELECT name, area FROM world WHERE area BETWEEN 250000 AND 300000) Shows list of countries and their areas between 250000 and 300000 km
+    * (SELECT name FROM world WHERE name LIKE 'Y%') finds countries with names beginning with Y (% is a wildcard, it can match any characters)
+    * (SELECT name FROM world WHERE name LIKE '%Y') finds countries with names ending with Y
+    * (SELECT name FROM world WHERE name LIKE '%X%') finds countries with names that have an X
+    * (SELECT name FROM world WHERE name LIKE 'C%ia') finds countries with names that start with C and end with ia
+    * (SELECT name FROM world WHERE name LIKE '%a%a%a%') finds countries with names that have 3 or more a's in the name
+    * (SELECT name FROM world WHERE name LIKE ' _ t%') _ functions as a single character wildcard (countries with second letter t)
+    * (SELECT name FROM world WHERE name LIKE '_ _ _ _ ') finds countries with names with 4 characters
+    * (SELECT name FROM world WHERE name LIKE capital) finds countries with capital cities with same name as country
+    * (SELECT name, (population/1000000) FROM world WHERE continent LIKE 'South America') to get name and population in millions for countries in South America
+    * (SELECT count( * ) FROM income;) counts how many incomes are listed, * gives all the data for each row in a table
+    * (SELECT ( * ) FROM person LIMIT 5;) lists the first 5 people from the person table
+    * (SELECT DISTINCT type FROM crime_scene_report;) lists each TYPE of crime only once rather than each occurrence
+    * (SELECT * FROM crime_scene_report WHERE type = 'theft' AND city = 'Chicago') returns thefts in Chicago, AND keyword is used to string together multiple filtering criteria
+    * SQL commands are not case-sensitive, but WHERE query values for = and LIKE are. Use UPPER() and LOWER() to make the query all upper or lower case
+  * Aggregate functions
+    * (SELECT SUM(population) FROM world) Shows populations added together of entire world
+    * (SELECT COUNT(name) FROM world WHERE area > 1000000) shows countries where area greater than 1000000
+    * (SELECT continent, COUNT(name) FROM world GROUP BY continent) Counts number of countries then groups them by continent
+    * (SELECT continent, SUM(population) FROM world GROUP BY continent HAVING SUM(population)>500000000) HAVING tests aggregated values. Shows the total population of those continents with a total population of at least half a billion
+    * MAX finds maximum value
+    * MIN finds minimum value
+    * AVG calculates the average of the specified column values
+    * ASC orders results by criteria(e.g. age) in ascending order, DESC by descending order (put before final statement e.g. ASC LIMIT 10)
+* Sinatra flash: https://github.com/SFEley/sinatra-flash
+  * if params['url'] =~ /\A#{URI::regexp(['http', 'https'])}\z/
+  * ^^^^ WHAT DOES THIS MEAN
+    * Bookmark.create(url: params['url'], title: params[:title])
+  * else
+    * flash[:notice] = "You must submit a valid URL."
+  * end
