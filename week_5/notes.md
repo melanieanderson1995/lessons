@@ -111,5 +111,5 @@
       * 'text' can also be a method such as (as long as you called a new instance of Thermostat first and assigned it) thermostat.temperature
     * .attr() get the value of an attribute for the first element in the set of matched elements
       * "$('#temperature').attr('class', thermostat.energyUsage());
-      }" where #temperature is the id, the attr we're adding is a 'class', and what determines it is the output from thermostat.energyUsage()
+      }" where #temperature is the id, the attr we're adding is a 'class', and what determines it is the output from thermostat.energyUsage()s
   * Flow of user interaction: user input -> event listener -> update model -> update view to reflect change in model
